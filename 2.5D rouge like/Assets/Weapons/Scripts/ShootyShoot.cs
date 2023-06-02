@@ -21,6 +21,11 @@ public class ShootyShoot : MonoBehaviour
         inputs = GameObject.FindGameObjectWithTag("Player").GetComponent<Inputs>();
         canShoot = true;
     }
+
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
     private void Update()
     {
         if(inputs.shooting)
@@ -67,5 +72,4 @@ public class ShootyShoot : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
         canShoot = true;
     }
-
 }
