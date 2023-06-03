@@ -18,6 +18,7 @@ public class EnemyProjectile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         player_Managment = player.GetComponent<Player_Managment>();
         bol = true;
+        gameObject.tag = "Bullet";
     }
     void Update()
     {
@@ -33,7 +34,11 @@ public class EnemyProjectile : MonoBehaviour
                 bol = false;
             }
         }
-        Destroy(gameObject);
+        if(!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Enemy"))
+        {
+            Destroy(gameObject);
+        }
+
     }
     private void PlayerHit()
     {

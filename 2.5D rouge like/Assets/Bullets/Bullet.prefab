@@ -126,9 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 15
-  relativeSize: 1
-  pierceCap: 1
   DMG: 10
+  objHit: {fileID: 0}
 --- !u!54 &-6177269765112739649
 Rigidbody:
   m_ObjectHideFlags: 0

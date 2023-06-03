@@ -17,6 +17,7 @@ public class ProjectileMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         bol = true;
+        gameObject.tag = "Bullet";
     }
     public void Update()
     {
@@ -35,7 +36,10 @@ public class ProjectileMovement : MonoBehaviour
                 bol = false;
             }
         }
-        Destroy(gameObject);
+        if (!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player"))
+        {
+            Destroy(gameObject);
+        }
     }
     private void TargetHit()
     {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2913836220065444183}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,11 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 12
   DMG: 5
-  areaRadius: 1
-  enemiesInBlast: []
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 1024
+  objHit: {fileID: 0}
 --- !u!54 &-6177269765112739649
 Rigidbody:
   m_ObjectHideFlags: 0
