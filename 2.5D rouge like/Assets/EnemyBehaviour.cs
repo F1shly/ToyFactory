@@ -8,7 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
     public LayerMask playerMask;
     public Transform playerCheck;
     public Transform selfTransform;
-    public float areaRadius, tooClose;
+    public float areaRadius;
     GameObject player;
     NavMeshAgent agent;
 
@@ -28,16 +28,10 @@ public class EnemyBehaviour : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 2)
         {
-            if (Physics.CheckSphere(playerCheck.position, areaRadius, playerMask) &! Physics.CheckSphere(playerCheck.position, tooClose, playerMask))
-            {
-                gameObject.GetComponent<EnemyShootyShoot>().enabled = false;
-                agent.destination = player.transform.position;
-            }
-            if (Physics.CheckSphere(playerCheck.position, tooClose, playerMask))
+            if (Physics.CheckSphere(playerCheck.position, areaRadius, playerMask))
             {
                 gameObject.GetComponent<EnemyShootyShoot>().enabled = true;
-                agent.destination = transform.position;
-                transform.LookAt(player.transform);
+                agent.destination = player.transform.position;
             }
             if (!Physics.CheckSphere(playerCheck.position, areaRadius, playerMask))
             {

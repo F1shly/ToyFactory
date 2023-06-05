@@ -15,29 +15,24 @@ public class EnemyShootyShoot : MonoBehaviour
 
     public bool BurstFire, FullAuto;
 
-    private void Awake()
-    {
-        canShoot = true;
-    }
-
     private void OnEnable()
     {
         canShoot = true;
     }
     private void Update()
     {
-            if (canShoot)
+        if (canShoot)
+        {
+            canShoot = false;
+            if (FullAuto)
             {
-                canShoot = false;
-                if (FullAuto)
-                {
-                    StartCoroutine(RPMFullAuto());
-                }
-                if (BurstFire)
-                {
-                    StartCoroutine(RPMBurst());
-                }
+                StartCoroutine(RPMFullAuto());
             }
+            if (BurstFire)
+            {
+                StartCoroutine(RPMBurst());
+            }
+        }
     }
 
     IEnumerator RPMFullAuto()

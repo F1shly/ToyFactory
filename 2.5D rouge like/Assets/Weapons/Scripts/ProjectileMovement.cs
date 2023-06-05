@@ -23,13 +23,14 @@ public class ProjectileMovement : MonoBehaviour
     {
         rb.velocity = transform.forward * projectileSpeed;
     }
-    private void OnCollisionStay(Collision collision)
+    
+    private void OnTriggerStay(Collider collision)
     {
-        print(collision.collider.name);
-        objHit = GameObject.Find(collision.collider.name);
+        print(collision.gameObject.name);
+        objHit = GameObject.Find(collision.gameObject.name);
         if (collision.gameObject.tag == "Enemy")
         {
-            print(collision.collider.name);
+            print(collision.gameObject.name);
             if (bol)
             {
                 TargetHit();

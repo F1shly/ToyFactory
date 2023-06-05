@@ -8,6 +8,7 @@ TagManager:
   - PojSpawn
   - Bullet
   - Enemy
+  - ItemHolder
   layers:
   - Default
   - TransparentFX

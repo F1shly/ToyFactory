@@ -24,7 +24,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         rb.velocity = transform.forward * projectileSpeed;
     }
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {        
         if(collision.gameObject.tag == "Player")
         {

@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 1153175461}
   m_Layer: 0
   m_Name: itemholder
-  m_TagString: Untagged
+  m_TagString: ItemHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   gravity: -10
   sens: 15
   lookAng: 0
-  rotateSpeed: 0.5
+  rotateSpeed: 3
   isGrounded: 0
   groundLayer:
     serializedVersion: 2

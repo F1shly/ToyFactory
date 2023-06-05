@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour
         slot_Active = true;
         player = GameObject.FindGameObjectWithTag("Player");
         inputs = player.GetComponent<Inputs>();
+        hand = GameObject.FindGameObjectWithTag("ItemHolder").transform;
     }
 
     private void Update()
