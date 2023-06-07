@@ -15,6 +15,14 @@ public class Cutscenes : MonoBehaviour
     {
         camOrigin = mainCam.transform;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
+        {
+            cutsceneStart += 1;
+        }
+    }
     private void Update()
     {
         if(cutsceneStart == 1)
@@ -33,7 +41,7 @@ public class Cutscenes : MonoBehaviour
         }
         if(cutsceneStart == 3)
         {
-            var step = speed * Time.deltaTime;
+            var step = speed * Time.deltaTime * 1.5f;
             cutSceneCam.transform.position = Vector3.MoveTowards(cutSceneCam.transform.position, camOrigin.position, step);
             if (Vector3.Distance(cutSceneCam.transform.position, camOrigin.position) < 1)
             {
