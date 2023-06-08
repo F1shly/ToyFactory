@@ -32,7 +32,7 @@ public class SceneSwapping : MonoBehaviour
     {
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
 
         SceneManager.LoadScene(sceneNumber);
     }
