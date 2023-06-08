@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneSwapping : MonoBehaviour
 {
     public bool next;
-    public int targetScene;
+    public int sceneNumber;
     GameObject player;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -20,7 +21,7 @@ public class SceneSwapping : MonoBehaviour
         }
     }
 
-
+    public Animator transition;
 
     public void LoadNextLevel()
     {
@@ -29,9 +30,11 @@ public class SceneSwapping : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        transition.SetTrigger("Start");
+
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(targetScene);
+        SceneManager.LoadScene(sceneNumber);
     }
 
     private void Update()
