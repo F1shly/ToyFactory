@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class Cutscenes : MonoBehaviour
 {
     public float speed;
@@ -10,6 +11,10 @@ public class Cutscenes : MonoBehaviour
     public GameObject cutSceneCam;
     public Transform target;
     Transform camOrigin;
+
+    public TextMeshProUGUI NPCText;
+    public GameObject MainUI;
+    public GameObject NPCUI;
 
     private void Awake()
     {
@@ -20,16 +25,23 @@ public class Cutscenes : MonoBehaviour
     {
         if(other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
         {
-            cutsceneStart += 1;
+            StartCoroutine(Talking());
+            MainUI.SetActive(false);
+            NPCUI.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
+        {
+            MainUI.SetActive(true);
+            NPCUI.SetActive(false);
         }
     }
     private void Update()
     {
         if(cutsceneStart == 1)
         {
-            mainCam.SetActive(false);
-            cutSceneCam.SetActive(true);
-
             cutSceneCam.transform.LookAt(target);
             var step = speed * Time.deltaTime;
             cutSceneCam.transform.position = Vector3.MoveTowards(cutSceneCam.transform.position, target.position, step);
@@ -50,6 +62,14 @@ public class Cutscenes : MonoBehaviour
             }
         }
     }
+    IEnumerator Talking()
+    {
+        mainCam.SetActive(false);
+        cutSceneCam.SetActive(true);
+        yield return new WaitForSeconds(2);
+        cutsceneStart += 1;
+    }
+
     IEnumerator Cutscene()
     {
         yield return new WaitForSeconds(3);
