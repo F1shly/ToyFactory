@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1005828160342426370}
   - component: {fileID: 2305897578385027282}
   m_Layer: 10
-  m_Name: Cube (3)
+  m_Name: Arm1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 5711569161579262045}
   - component: {fileID: 2766610372097910702}
   m_Layer: 10
-  m_Name: Cube (9)
+  m_Name: Eye2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 4051681670149289108}
   - component: {fileID: 1976330202988298553}
   m_Layer: 10
-  m_Name: Cube (4)
+  m_Name: Arm2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 7568327110336332269}
   - component: {fileID: 1733308743440376907}
   m_Layer: 10
-  m_Name: Cube
+  m_Name: Legs
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 1198442536752516882}
   - component: {fileID: 1519292939294188608}
   m_Layer: 10
-  m_Name: Cube (8)
+  m_Name: Eye1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 1902650070321448817}
   - component: {fileID: 5028761932321338720}
   m_Layer: 10
-  m_Name: Cube (2)
+  m_Name: Head
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 1546114854308071775}
   - component: {fileID: 1633029401634534476}
   m_Layer: 10
-  m_Name: Cube (1)
+  m_Name: Body
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1187,9 +1187,16 @@ MonoBehaviour:
   playerCheck: {fileID: 1636866086557178864}
   selfTransform: {fileID: 1636866086557178864}
   areaRadius: 15
-  tooClose: 7
   HP: 100
   test: 0
+  myModelHead: {fileID: 1902650070321448817}
+  myModelBody: {fileID: 1546114854308071775}
+  myModelLegs: {fileID: 7568327110336332269}
+  defaultMat: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  damageMat: {fileID: 2100000, guid: 51994124b2cae584f9ea581f0963571f, type: 2}
+  delay: 0.5
+  hasAttacked: 0
+  assignedRoom: {fileID: 0}
 --- !u!114 &212738338612362239
 MonoBehaviour:
   m_ObjectHideFlags: 0

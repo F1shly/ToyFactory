@@ -34,7 +34,7 @@ public class EnemyProjectile : MonoBehaviour
                 bol = false;
             }
         }
-        if(!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Enemy"))
+        if(!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "RoomClass"))
         {
             Destroy(gameObject);
         }

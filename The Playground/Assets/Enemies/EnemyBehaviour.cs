@@ -27,10 +27,14 @@ public class EnemyBehaviour : MonoBehaviour
 
     public bool hasAttacked = false;
 
+    public GameObject assignedRoom;
+    RoomClearCheck roomClearCheck;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
+        roomClearCheck = assignedRoom.GetComponent<RoomClearCheck>();
     }
     void Update()
     {
@@ -70,5 +74,9 @@ public class EnemyBehaviour : MonoBehaviour
                 hasAttacked = false;
             }
         }
+    }
+    private void OnDestroy()
+    {
+        roomClearCheck.enemy_total -= 1;
     }
 }

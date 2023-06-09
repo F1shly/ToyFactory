@@ -45,7 +45,7 @@ public class ProjectileMovement : MonoBehaviour
 
 
         }
-        if (!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player"))
+        if (!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player" || collision.gameObject.tag == "RoomClass"))
         {
             Destroy(gameObject);
         }

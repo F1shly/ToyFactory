@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Enemy
   - ItemHolder
+  - RoomClass
   layers:
   - Default
   - TransparentFX
