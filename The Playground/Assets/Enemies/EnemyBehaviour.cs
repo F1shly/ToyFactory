@@ -18,6 +18,15 @@ public class EnemyBehaviour : MonoBehaviour
 
     public float test;
 
+    [SerializeField] public Renderer myModelHead;
+    [SerializeField] public Renderer myModelBody;
+    [SerializeField] public Renderer myModelLegs;
+    public Material defaultMat;
+    public Material damageMat;
+    public float delay = 0.5f;
+
+    public bool hasAttacked = false;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -42,6 +51,24 @@ public class EnemyBehaviour : MonoBehaviour
         if(HP <= 0)
         {
             Destroy(gameObject);
+        }
+
+        if(hasAttacked)
+        {
+            myModelHead.material = damageMat;
+            myModelBody.material = damageMat;
+            myModelLegs.material = damageMat;
+
+            delay -= Time.deltaTime;
+            if (delay <= 0)
+            {
+                myModelHead.material = defaultMat;
+                myModelBody.material = defaultMat;
+                myModelLegs.material = defaultMat;
+                Debug.Log("HHHHHHHHH");
+                delay = 0.5f;
+                hasAttacked = false;
+            }
         }
     }
 }

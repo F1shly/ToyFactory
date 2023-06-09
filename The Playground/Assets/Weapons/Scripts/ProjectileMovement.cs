@@ -9,8 +9,10 @@ public class ProjectileMovement : MonoBehaviour
 
     public GameObject objHit;
 
+    public float timer = 1f;
+
     Rigidbody rb;
-    private bool bol;
+    private bool bol = false;
     private void Awake()
     {
         transform.parent = null;
@@ -18,24 +20,30 @@ public class ProjectileMovement : MonoBehaviour
 
         bol = true;
         gameObject.tag = "Bullet";
+
     }
     public void Update()
     {
         rb.velocity = transform.forward * projectileSpeed;
+
     }
     
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         print(collision.gameObject.name);
         objHit = GameObject.Find(collision.gameObject.name);
         if (collision.gameObject.tag == "Enemy")
         {
+            
             print(collision.gameObject.name);
             if (bol)
             {
                 TargetHit();
                 bol = false;
+                
             }
+
+
         }
         if (!(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Player"))
         {
@@ -45,6 +53,6 @@ public class ProjectileMovement : MonoBehaviour
     private void TargetHit()
     {
         objHit.GetComponent<EnemyBehaviour>().HP -= DMG;
-        bol = true;
+        objHit.GetComponent<EnemyBehaviour>().hasAttacked = true;
     }
 }

@@ -3693,6 +3693,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 326979790}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &617058444 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1902650070321448817, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+    type: 3}
+  m_PrefabInstance: {fileID: 2011782434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &627061281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7337,6 +7343,12 @@ Transform:
   m_Father: {fileID: 1138379667}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 52.575, z: 0}
+--- !u!23 &1112404581 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7568327110336332269, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+    type: 3}
+  m_PrefabInstance: {fileID: 2011782434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1118039801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10179,6 +10191,12 @@ Transform:
   m_Father: {fileID: 1138379667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1411396455 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1546114854308071775, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+    type: 3}
+  m_PrefabInstance: {fileID: 2011782434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1413464547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14398,6 +14416,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957523878575728282, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Arm1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445706805627571300, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: myModelHead
+      value: 
+      objectReference: {fileID: 617058444}
+    - target: {fileID: 1445706805627571300, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: myModelBody
+      value: 
+      objectReference: {fileID: 1411396455}
+    - target: {fileID: 1445706805627571300, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: myModelLegs
+      value: 
+      objectReference: {fileID: 1112404581}
+    - target: {fileID: 1445706805627571300, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: defaultMat
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1445706805627571300, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: damageMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 51994124b2cae584f9ea581f0963571f, type: 2}
     - target: {fileID: 1636866086557178864, guid: 7c42ba2d93e840142a8f26fc75c7da72,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14452,6 +14500,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973703245251306427, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Eye2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868428384183283123, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Arm2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265353974085792637, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Legs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448710680688476650, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Eye1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568327110336332269, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7621785898667688049, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890686882084844949, guid: 7c42ba2d93e840142a8f26fc75c7da72,
+        type: 3}
+      propertyPath: m_Name
+      value: Body
       objectReference: {fileID: 0}
     - target: {fileID: 9179293121495480877, guid: 7c42ba2d93e840142a8f26fc75c7da72,
         type: 3}
