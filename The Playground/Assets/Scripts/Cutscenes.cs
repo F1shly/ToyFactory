@@ -16,6 +16,8 @@ public class Cutscenes : MonoBehaviour
     public GameObject MainUI;
     public GameObject NPCUI;
 
+    public GameObject pSystems;
+
     private void Awake()
     {
         camOrigin = mainCam.transform;
@@ -59,6 +61,7 @@ public class Cutscenes : MonoBehaviour
             {
                 cutSceneCam.SetActive(false);
                 mainCam.SetActive(true);
+                Destroy(pSystems);
             }
         }
     }
