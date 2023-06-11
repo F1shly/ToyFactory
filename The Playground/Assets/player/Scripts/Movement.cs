@@ -15,7 +15,8 @@ public class Movement : MonoBehaviour
     public float gravity = -10;
     public float sens = 15;
 
-    public float lookAng;
+    public float lookAngX;
+    public float lookAngY;
     public float rotateSpeed = 2;
 
     public bool isGrounded;
@@ -23,7 +24,8 @@ public class Movement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance;
 
-    public Transform pivot;
+    public Transform pivot, cam, projSpawner;
+    public float minPiv, maxPiv;
 
     private Animator anim;
 
@@ -102,16 +104,30 @@ public class Movement : MonoBehaviour
     {
         Vector3 rotation = Vector3.zero;
 
-        lookAng = lookAng + (inputs.rotInpX * rotateSpeed);
+        lookAngX = lookAngX + (inputs.rotInpX * rotateSpeed);
+        lookAngY = lookAngY + (-inputs.rotInpY * rotateSpeed);
+        lookAngY = Mathf.Clamp(lookAngY, minPiv, maxPiv);
+
 
         rotation = Vector3.zero;
-        rotation.y = lookAng;
+        rotation.y = lookAngX;
         Quaternion targetRotation = Quaternion.Euler(rotation);
         transform.rotation = targetRotation;
 
         rotation = Vector3.zero;
         targetRotation = Quaternion.Euler(rotation);
         pivot.localRotation = targetRotation;
+
+        Vector3 camRot = Vector3.zero;
+        camRot.x = lookAngY;
+        Quaternion camY = Quaternion.Euler(camRot);
+        cam.localRotation = camY;
+
+        Vector3 projrot = Vector3.zero;
+        projrot.x = lookAngY - 3;
+        projrot.y = 1;
+        Quaternion projY = Quaternion.Euler(projrot);
+        projSpawner.localRotation = projY;
     }
 
     private void Update()

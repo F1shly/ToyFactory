@@ -12,6 +12,7 @@ public class Inputs : MonoBehaviour
     public float xInp;
     public float yInp;
     public float rotInpX;
+    public float rotInpY;
 
     public int inventSlot = 1;
     public bool shooting;
@@ -42,5 +43,6 @@ public class Inputs : MonoBehaviour
         yInp = movementInp.y;
         xInp = movementInp.x;
         rotInpX = rotationInp.x;
+        rotInpY = rotationInp.y;
     }
 }
