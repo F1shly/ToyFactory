@@ -1184,19 +1184,24 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 512
-  playerCheck: {fileID: 1636866086557178864}
-  selfTransform: {fileID: 1636866086557178864}
-  areaRadius: 15
   HP: 100
-  test: 0
   myModelHead: {fileID: 1902650070321448817}
   myModelBody: {fileID: 1546114854308071775}
   myModelLegs: {fileID: 7568327110336332269}
   defaultMat: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   damageMat: {fileID: 2100000, guid: 51994124b2cae584f9ea581f0963571f, type: 2}
   delay: 0.5
-  hasAttacked: 0
+  hasBeenAttacked: 0
   assignedRoom: {fileID: 0}
+  sightRange: 30
+  attackRange: 20
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  movePoint: {x: 0, y: 0, z: 0}
+  movePointRange: 50
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!114 &212738338612362239
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -53,6 +53,6 @@ public class ProjectileMovement : MonoBehaviour
     private void TargetHit()
     {
         objHit.GetComponent<EnemyBehaviour>().HP -= DMG;
-        objHit.GetComponent<EnemyBehaviour>().hasAttacked = true;
+        objHit.GetComponent<EnemyBehaviour>().hasBeenAttacked = true;
     }
 }
