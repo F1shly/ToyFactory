@@ -8,12 +8,13 @@ public class ShootyShoot : MonoBehaviour
     Inputs inputs;
     public GameObject projectile;
     public float fireRate, burstRPM;
-    public int burstNumber;
+    public float MultiShotSpreadX, MultiShotSpreadY, MultiShotSpreadZ;
+    public int bulletsPerShot;
     public bool canShoot;
 
     GameObject pojectileSpawner;
 
-    public bool BurstFire, SinlgeShot, FullAuto;
+    public bool BurstFire, SinlgeShot, FullAuto, multiShot;
 
     private void Awake()
     {
@@ -48,6 +49,10 @@ public class ShootyShoot : MonoBehaviour
                         inputs.shooting = false;
                         StartCoroutine(RPMSingle());
                     }
+                    if(multiShot)
+                    {
+                        StartCoroutine(RPMMulti());
+                    }
                 }
             }
         }
@@ -62,7 +67,7 @@ public class ShootyShoot : MonoBehaviour
     }
     IEnumerator RPMBurst()
     {
-        for (int i = 0; i < burstNumber; i++)
+        for (int i = 0; i < bulletsPerShot; i++)
         {
             Instantiate(projectile, pojectileSpawner.transform);
             yield return new WaitForSeconds(burstRPM);
@@ -73,6 +78,16 @@ public class ShootyShoot : MonoBehaviour
     IEnumerator RPMSingle()
     {
         Instantiate(projectile, pojectileSpawner.transform);
+        yield return new WaitForSeconds(fireRate);
+        canShoot = true;
+    }
+    IEnumerator RPMMulti()
+    {
+        for (int i = 0; i < bulletsPerShot; i++)
+        {
+            Vector3 spread = new Vector3(Random.Range(-MultiShotSpreadX, MultiShotSpreadX), Random.Range(-MultiShotSpreadY, MultiShotSpreadY), Random.Range(-MultiShotSpreadZ, MultiShotSpreadZ));
+            Instantiate(projectile, pojectileSpawner.transform.position + spread, pojectileSpawner.transform.rotation);
+        }
         yield return new WaitForSeconds(fireRate);
         canShoot = true;
     }

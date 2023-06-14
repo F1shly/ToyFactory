@@ -1233,8 +1233,8 @@ Transform:
   - {fileID: 1352921385}
   - {fileID: 81816195}
   - {fileID: 1976205169}
-  - {fileID: 1252262744}
   - {fileID: 1743262309}
+  - {fileID: 1252262744}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21995,7 +21995,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 230812734}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1283262441
 PrefabInstance:
@@ -22815,13 +22815,17 @@ MonoBehaviour:
   weaponID: 3
   projectile: {fileID: 8153718009676053682, guid: f36cdc5f16a75924c9779c337154e124,
     type: 3}
-  fireRate: 0.2
+  fireRate: 1
   burstRPM: 0
-  burstNumber: 0
+  MultiShotSpreadX: 1
+  MultiShotSpreadY: 1
+  MultiShotSpreadZ: 1
+  bulletsPerShot: 10
   canShoot: 0
   BurstFire: 0
   SinlgeShot: 0
-  FullAuto: 1
+  FullAuto: 0
+  multiShot: 1
 --- !u!114 &1360193953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32410,7 +32414,7 @@ PrefabInstance:
     - target: {fileID: 493767770374237332, guid: 4e7c317ac5e7a7a4f9fd5251e390a7a2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 493767770374237332, guid: 4e7c317ac5e7a7a4f9fd5251e390a7a2,
         type: 3}
