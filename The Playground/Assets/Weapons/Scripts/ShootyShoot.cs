@@ -7,14 +7,13 @@ public class ShootyShoot : MonoBehaviour
     public int weaponID;
     Inputs inputs;
     public GameObject projectile;
-    public float fireRate, burstRPM;
-    public float MultiShotSpreadX, MultiShotSpreadY, MultiShotSpreadZ;
-    public int bulletsPerShot;
     public bool canShoot;
 
     GameObject pojectileSpawner;
 
-    public bool BurstFire, SinlgeShot, FullAuto, multiShot;
+    public float fireRate, burstRPM, MultiShotSpread;
+    public int bulletsPerShot;
+    public bool BurstFire, SinlgeShot, FullAuto, shotGun;
 
     private void Awake()
     {
@@ -49,7 +48,7 @@ public class ShootyShoot : MonoBehaviour
                         inputs.shooting = false;
                         StartCoroutine(RPMSingle());
                     }
-                    if(multiShot)
+                    if(shotGun)
                     {
                         StartCoroutine(RPMMulti());
                     }
@@ -85,7 +84,7 @@ public class ShootyShoot : MonoBehaviour
     {
         for (int i = 0; i < bulletsPerShot; i++)
         {
-            Vector3 spread = new Vector3(Random.Range(-MultiShotSpreadX, MultiShotSpreadX), Random.Range(-MultiShotSpreadY, MultiShotSpreadY), Random.Range(-MultiShotSpreadZ, MultiShotSpreadZ));
+            Vector3 spread = new Vector3(Random.Range(-MultiShotSpread, MultiShotSpread), Random.Range(-MultiShotSpread, MultiShotSpread), Random.Range(-MultiShotSpread, MultiShotSpread));
             Instantiate(projectile, pojectileSpawner.transform.position + spread, pojectileSpawner.transform.rotation);
         }
         yield return new WaitForSeconds(fireRate);
