@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5776251918326670712}
+  - component: {fileID: 1634467649}
+  - component: {fileID: 997386553}
+  - component: {fileID: 997386554}
   m_Layer: 0
   m_Name: Pea Shooter
   m_TagString: Untagged
@@ -25,12 +28,63 @@ Transform:
   m_GameObject: {fileID: 451539736199566231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.164906, y: 0.164906, z: 0.164906}
   m_Children:
   - {fileID: 86488611420054080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1634467649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451539736199566231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.291814, y: 10.138906, z: 9.741625}
+  m_Center: {x: -3.1636655, y: 0.9092952, z: -0.2835343}
+--- !u!114 &997386553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451539736199566231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15952f8a0b0c4ae45821692b9165bf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 1
+  onFloor: 0
+  LevelManager: {fileID: 0}
+  scale: {x: 0.07, y: 0.07, z: 0.07}
+--- !u!114 &997386554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451539736199566231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f968df5144950e47b022f0c393adf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponID: 1
+  projectile: {fileID: 8153718009676053682, guid: f7730078517405e4196aaac58a6c7fd4,
+    type: 3}
+  fireRate: 0.75
+  burstRPM: 0.05
+  burstNumber: 3
+  canShoot: 0
+  BurstFire: 1
+  SinlgeShot: 0
+  FullAuto: 0
 --- !u!1 &1222831600311211873
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +98,7 @@ GameObject:
   - component: {fileID: 222784347453178628}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +177,7 @@ GameObject:
   - component: {fileID: 8299415354430890451}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +256,7 @@ GameObject:
   - component: {fileID: 4769357170168040701}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,7 +333,7 @@ GameObject:
   - component: {fileID: 86488611420054080}
   m_Layer: 0
   m_Name: Objects
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +380,7 @@ GameObject:
   - component: {fileID: 5252161512304894773}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,7 +459,7 @@ GameObject:
   - component: {fileID: 4023837866928648953}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +538,7 @@ GameObject:
   - component: {fileID: 3647002380623941690}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563,7 +617,7 @@ GameObject:
   - component: {fileID: 4215256716271869112}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +696,7 @@ GameObject:
   - component: {fileID: 4148215314215953731}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,7 +775,7 @@ GameObject:
   - component: {fileID: 8407909008671590406}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,7 +854,7 @@ GameObject:
   - component: {fileID: 7030210311122659154}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -879,7 +933,7 @@ GameObject:
   - component: {fileID: 2597412079729807166}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,7 +1012,7 @@ GameObject:
   - component: {fileID: 5390921328332377623}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1037,7 +1091,7 @@ GameObject:
   - component: {fileID: 8472661162187760174}
   m_Layer: 0
   m_Name: Sphere (2)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1116,7 +1170,7 @@ GameObject:
   - component: {fileID: 4631912619918962311}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1195,7 +1249,7 @@ GameObject:
   - component: {fileID: 5665080781679638992}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

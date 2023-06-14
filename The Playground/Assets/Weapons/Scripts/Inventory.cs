@@ -12,9 +12,9 @@ public class Inventory : MonoBehaviour
     public GameObject[] weapon;
     public Image inv_slot_1, inv_slot_2;
     public static int slot1, slot2, slot_Discarded;
-    public int test, test2;
+    public int test, test2, test3;
 
-    public Transform hand;
+    public Transform hand, holster;
 
     public static bool slot_Active;
 
@@ -24,10 +24,14 @@ public class Inventory : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         inputs = player.GetComponent<Inputs>();
         hand = GameObject.FindGameObjectWithTag("ItemHolder").transform;
+        holster = GameObject.FindGameObjectWithTag("Holster").transform;
     }
 
     private void Update()
     {
+        test = slot1;
+        test2 = slot2;
+        test3 = slot_Discarded;
         ///cycle through items
         if(inputs.inventSlot == 1)
         {
@@ -48,24 +52,27 @@ public class Inventory : MonoBehaviour
             inv_slot_1.transform.localScale = new Vector3(1, 1, 1);
             inv_slot_2.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
 
-            weapon[slot1].SetActive(true);
-            weapon[slot2].SetActive(false);
+            weapon[slot1].transform.position = hand.position;
+            weapon[slot1].transform.rotation = hand.rotation;
+
+            weapon[slot2].transform.position = holster.position;
+            weapon[slot2].transform.rotation = holster.rotation;
         }
         if (!slot_Active)
         {
             inv_slot_2.transform.localScale = new Vector3(1, 1, 1);
             inv_slot_1.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
-            weapon[slot1].SetActive(false);
-            weapon[slot2].SetActive(true);
+
+            weapon[slot2].transform.position = hand.position;
+            weapon[slot2].transform.rotation = hand.rotation;
+
+            weapon[slot1].transform.position = holster.position;
+            weapon[slot1].transform.rotation = holster.rotation;
         }
 
-        weapon[slot1].transform.position = hand.position;
-        weapon[slot2].transform.position = hand.position;
-        weapon[slot1].transform.rotation = hand.rotation;
-        weapon[slot2].transform.rotation = hand.rotation;
-        weapon[slot_Discarded].SetActive(true);
+        weapon[slot1].GetComponent<WeaponPickUp>().onFloor = false;
+        weapon[slot2].GetComponent<WeaponPickUp>().onFloor = false;
     }
-
     private void LateUpdate()
     {
         ///Updating UI
