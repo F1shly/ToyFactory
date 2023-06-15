@@ -44,6 +44,7 @@ public class Cutscenes : MonoBehaviour
     {
         if(cutsceneStart == 1)
         {
+            NPCUI.SetActive(false);
             cutSceneCam.transform.LookAt(target);
             var step = speed * Time.deltaTime;
             cutSceneCam.transform.position = Vector3.MoveTowards(cutSceneCam.transform.position, target.position, step);
