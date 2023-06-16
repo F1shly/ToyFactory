@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
 
     public Sprite[] weaponUI;
     public GameObject[] weapon;
-    public Image inv_slot_1, inv_slot_2;
+    public Image inv_slot_1, inv_slot_2, seleceted_1, selected_2;
     public static int slot1, slot2, slot_Discarded;
     public int test, test2, test3;
 
@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour
         if (slot_Active)
         {
             inv_slot_1.transform.localScale = new Vector3(1, 1, 1);
-            inv_slot_2.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+            inv_slot_2.transform.localScale = new Vector3(.5f, .5f, .5f);
 
             weapon[slot1].transform.position = hand.position;
             weapon[slot1].transform.rotation = hand.rotation;
@@ -61,7 +61,7 @@ public class Inventory : MonoBehaviour
         if (!slot_Active)
         {
             inv_slot_2.transform.localScale = new Vector3(1, 1, 1);
-            inv_slot_1.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+            inv_slot_1.transform.localScale = new Vector3(.5f, .5f, .5f);
 
             weapon[slot2].transform.position = hand.position;
             weapon[slot2].transform.rotation = hand.rotation;
