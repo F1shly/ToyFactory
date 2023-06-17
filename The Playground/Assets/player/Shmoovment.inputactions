@@ -38,10 +38,10 @@
                     "interactions": ""
                 },
                 {
-                    "name": "New action",
-                    "type": "PassThrough",
-                    "id": "af76685d-b6a7-46f4-8fb7-ac678a6d848b",
-                    "expectedControlType": "Vector2",
+                    "name": "Action",
+                    "type": "Button",
+                    "id": "50331d53-ac00-41f4-8c56-d6a12b29aed5",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -247,12 +247,23 @@
                 },
                 {
                     "name": "",
-                    "id": "9692b9aa-4d87-4bac-b847-73913e97d964",
-                    "path": "<Keyboard>/p",
+                    "id": "38dad7fa-a538-44ef-b0ae-9186d20011ba",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a9c7811-06c5-41a7-b9bb-6ac0d83e4005",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

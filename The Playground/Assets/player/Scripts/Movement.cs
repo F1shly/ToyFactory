@@ -29,11 +29,14 @@ public class Movement : MonoBehaviour
 
     private Animator anim;
 
+    public bool canMove;
+
     private void Awake()
     {
         inputs = GetComponent<Inputs>();
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        canMove = true;
     }
 
     public void HandleAllMovement()
@@ -140,5 +143,14 @@ public class Movement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if(canMove)
+        {
+            HandleAllMovement();
+        }
+
     }
 }

@@ -51,10 +51,10 @@ public class @Shmoovment : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""New action"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""af76685d-b6a7-46f4-8fb7-ac678a6d848b"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""Action"",
+                    ""type"": ""Button"",
+                    ""id"": ""50331d53-ac00-41f4-8c56-d6a12b29aed5"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -260,12 +260,23 @@ public class @Shmoovment : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9692b9aa-4d87-4bac-b847-73913e97d964"",
-                    ""path"": ""<Keyboard>/p"",
+                    ""id"": ""38dad7fa-a538-44ef-b0ae-9186d20011ba"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a9c7811-06c5-41a7-b9bb-6ac0d83e4005"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -847,7 +858,7 @@ public class @Shmoovment : IInputActionCollection, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_ItemSelect = m_Player.FindAction("ItemSelect", throwIfNotFound: true);
-        m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
+        m_Player_Action = m_Player.FindAction("Action", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -913,7 +924,7 @@ public class @Shmoovment : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_ItemSelect;
-    private readonly InputAction m_Player_Newaction;
+    private readonly InputAction m_Player_Action;
     public struct PlayerActions
     {
         private @Shmoovment m_Wrapper;
@@ -922,7 +933,7 @@ public class @Shmoovment : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @ItemSelect => m_Wrapper.m_Player_ItemSelect;
-        public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
+        public InputAction @Action => m_Wrapper.m_Player_Action;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -944,9 +955,9 @@ public class @Shmoovment : IInputActionCollection, IDisposable
                 @ItemSelect.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemSelect;
                 @ItemSelect.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemSelect;
                 @ItemSelect.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemSelect;
-                @Newaction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
+                @Action.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAction;
+                @Action.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAction;
+                @Action.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAction;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -963,9 +974,9 @@ public class @Shmoovment : IInputActionCollection, IDisposable
                 @ItemSelect.started += instance.OnItemSelect;
                 @ItemSelect.performed += instance.OnItemSelect;
                 @ItemSelect.canceled += instance.OnItemSelect;
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
+                @Action.started += instance.OnAction;
+                @Action.performed += instance.OnAction;
+                @Action.canceled += instance.OnAction;
             }
         }
     }
@@ -1126,7 +1137,7 @@ public class @Shmoovment : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnItemSelect(InputAction.CallbackContext context);
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnAction(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

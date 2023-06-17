@@ -26,9 +26,4 @@ public class Player_Managment : MonoBehaviour
             HP = 100;
         }
     }
-
-    private void FixedUpdate()
-    {
-        movement.HandleAllMovement();
-    }
 }

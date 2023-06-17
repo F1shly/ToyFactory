@@ -16,6 +16,7 @@ public class Inputs : MonoBehaviour
 
     public int inventSlot = 1;
     public bool shooting;
+    public bool interacting;
 
     private void OnEnable()
     {
@@ -26,6 +27,7 @@ public class Inputs : MonoBehaviour
             shmoovment.Player.Look.performed += i => rotationInp = i.ReadValue<Vector2>();
             shmoovment.Player.ItemSelect.performed += i => inventSlot += 1;
             shmoovment.Player.Fire.performed += i => shooting = i.ReadValueAsButton();
+            shmoovment.Player.Action.performed += i => interacting = i.ReadValueAsButton();
         }
         shmoovment.Enable();
     }
@@ -44,5 +46,13 @@ public class Inputs : MonoBehaviour
         xInp = movementInp.x;
         rotInpX = rotationInp.x;
         rotInpY = rotationInp.y;
+    }
+
+    private void Update()
+    {
+        if(interacting)
+        {
+            interacting = false;
+        }
     }
 }

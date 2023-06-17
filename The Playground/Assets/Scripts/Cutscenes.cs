@@ -12,32 +12,38 @@ public class Cutscenes : MonoBehaviour
     public Transform target;
     Transform camOrigin;
 
-    public TextMeshProUGUI NPCText;
     public GameObject MainUI;
     public GameObject NPCUI;
 
     public GameObject pSystems;
 
+    GameObject player;
+    Movement movement;
+    private Animator anim;
+    public Transform standingspot;
+
     private void Awake()
     {
         camOrigin = mainCam.transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        movement = player.GetComponent<Movement>();
+        anim = player.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
         {
-            StartCoroutine(Talking());
+            movement.canMove = false;
+            anim.SetInteger("Direction", 0);
+            Destroy(pSystems);
+            player.transform.position = standingspot.position;
+            player.transform.rotation = standingspot.rotation;
+
+            mainCam.SetActive(false);
+            cutSceneCam.SetActive(true);
             MainUI.SetActive(false);
             NPCUI.SetActive(true);
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
-        {
-            MainUI.SetActive(true);
-            NPCUI.SetActive(false);
         }
     }
     private void Update()
@@ -62,16 +68,11 @@ public class Cutscenes : MonoBehaviour
             {
                 cutSceneCam.SetActive(false);
                 mainCam.SetActive(true);
-                Destroy(pSystems);
+                movement.canMove = true;
+                MainUI.SetActive(true);
+                Destroy(gameObject);
             }
         }
-    }
-    IEnumerator Talking()
-    {
-        mainCam.SetActive(false);
-        cutSceneCam.SetActive(true);
-        yield return new WaitForSeconds(2);
-        cutsceneStart += 1;
     }
 
     IEnumerator Cutscene()
