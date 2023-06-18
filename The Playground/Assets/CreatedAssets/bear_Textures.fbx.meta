@@ -3,42 +3,7 @@ guid: 683ef2bf99c74f74e85d672c2853125b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bear_Base
-    second: {fileID: 2100000, guid: 5a07cb9ba296bdb45b3643c1c16e5b10, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bear_Patch
-    second: {fileID: 2100000, guid: 8e5bba1f62ada004a84d5a3837e1faeb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bear_Secondary
-    second: {fileID: 2100000, guid: bfe02ddc659fb0943bc9cb5b2ec11814, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bear_Secondary.001
-    second: {fileID: 2100000, guid: 24e47bc77b3ef7247aaa9baa57880148, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Button
-    second: {fileID: 2100000, guid: a9b427f0c6fff7b4b9f9b4dce4a411db, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Button.001
-    second: {fileID: 2100000, guid: 1371d73cf2cfdf74090f9ff225204ddd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stiching.006
-    second: {fileID: 2100000, guid: 92a1df60f49b50c4c93dbdd844c8d36b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
