@@ -15,8 +15,6 @@ public class Cutscenes : MonoBehaviour
     public GameObject MainUI;
     public GameObject NPCUI;
 
-    public GameObject pSystems;
-
     GameObject player;
     Movement movement;
     private Animator anim;
@@ -36,7 +34,6 @@ public class Cutscenes : MonoBehaviour
         {
             movement.canMove = false;
             anim.SetInteger("Direction", 0);
-            Destroy(pSystems);
             player.transform.position = standingspot.position;
             player.transform.rotation = standingspot.rotation;
 
