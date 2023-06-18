@@ -48,7 +48,7 @@ public class Inputs : MonoBehaviour
         rotInpY = rotationInp.y;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if(interacting)
         {

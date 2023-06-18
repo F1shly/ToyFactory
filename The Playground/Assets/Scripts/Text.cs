@@ -45,7 +45,7 @@ public class Text : MonoBehaviour
         if (inputs.interacting)
         {
             current_text_stage += 1;
-            inputs.interacting = false;
+            //inputs.interacting = false;
         }
     }
 }
