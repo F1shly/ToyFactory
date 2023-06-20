@@ -9,6 +9,8 @@ public class Text : MonoBehaviour
     int current_text_stage = 0;
     GameObject player;
     Inputs inputs;
+    public Image pic;
+    public Sprite picSprite;
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class Text : MonoBehaviour
         {
             gameObject.GetComponent<Text>().enabled = true;
             current_text_stage = 1;
+            pic.sprite = picSprite;
         }
     }
     private void Update()

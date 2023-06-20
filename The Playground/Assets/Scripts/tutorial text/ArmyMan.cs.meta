@@ -3,7 +3,12 @@ guid: c0b7a77530ab266468dbd500e8355326
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - NPCText: {instanceID: 0}
+  - MainUI: {instanceID: 0}
+  - NPCUI: {instanceID: 0}
+  - pic: {instanceID: 0}
+  - picSprite: {fileID: 21300000, guid: 4125837da3a4d29478bb66eb8d5064ce, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

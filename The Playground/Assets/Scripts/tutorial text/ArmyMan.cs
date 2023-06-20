@@ -14,6 +14,8 @@ public class ArmyMan : MonoBehaviour
     public GameObject MainUI;
     public GameObject NPCUI;
 
+    public Image pic;
+    public Sprite picSprite;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -31,8 +33,8 @@ public class ArmyMan : MonoBehaviour
                 on = true;
                 MainUI.SetActive(false);
                 NPCUI.SetActive(true);
+                pic.sprite = picSprite;
             }
-
         }
     }
     private void Update()
@@ -47,7 +49,7 @@ public class ArmyMan : MonoBehaviour
         }
         if (text_stage == 3)
         {
-            NPCText.text = "GIVE <sprite=3> OR <sprite=1> A PRESS";
+            NPCText.text = "GIVE <sprite=3> OR <sprite=8> A PRESS";
         }
         if (text_stage == 4)
         {
