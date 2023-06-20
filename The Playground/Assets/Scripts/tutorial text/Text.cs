@@ -19,6 +19,7 @@ public class Text : MonoBehaviour
     {
         if (other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
         {
+            gameObject.GetComponent<Text>().enabled = true;
             current_text_stage = 1;
         }
     }
