@@ -74,7 +74,7 @@ public class Cutscenes : MonoBehaviour
 
     IEnumerator Cutscene()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         cutsceneStart += 1;
     }
 }

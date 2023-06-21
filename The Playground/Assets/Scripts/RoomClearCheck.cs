@@ -40,6 +40,13 @@ public class RoomClearCheck : MonoBehaviour
 
         if(condition_met)
         {
+            ArmyMan1 textScript = gameObject.GetComponent<ArmyMan1>();
+            if (!textScript.on)
+            {
+                gameObject.GetComponent<ArmyMan1>().enabled = true;
+                textScript.text_stage = 1;
+            }
+
             foreach (var item in room_walls)
             {
                 Destroy(item);
