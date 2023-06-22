@@ -45,6 +45,7 @@ public class RoomClearCheck : MonoBehaviour
             {
                 gameObject.GetComponent<ArmyMan1>().enabled = true;
                 textScript.text_stage = 1;
+                textScript.on = true;
             }
 
             foreach (var item in room_walls)

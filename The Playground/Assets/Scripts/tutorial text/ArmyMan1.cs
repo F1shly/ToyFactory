@@ -27,7 +27,6 @@ public class ArmyMan1 : MonoBehaviour
         if(text_stage == 1)
         {
             NPCText.text = "WELL DONE SOLDIER, I THINK YOU ARE READY TO GET INTO THE THICK OF IT NOW!";
-            on = true;
             MainUI.SetActive(false);
             NPCUI.SetActive(true);
             pic.sprite = picSprite;
@@ -46,10 +45,11 @@ public class ArmyMan1 : MonoBehaviour
         }
 
         if (text_stage == 5)
-        {
-            gameObject.GetComponent<ArmyMan>().enabled = false;
+        {            
             MainUI.SetActive(true);
             NPCUI.SetActive(false);
+            gameObject.GetComponent<ArmyMan>().enabled = false;
+
         }
         if (inputs.interacting)
         {
