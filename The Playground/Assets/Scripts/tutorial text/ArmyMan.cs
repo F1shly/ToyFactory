@@ -6,7 +6,7 @@ using TMPro;
 public class ArmyMan : MonoBehaviour
 {
     public TextMeshProUGUI NPCText;
-    int text_stage = 0;
+    public int text_stage = 0;
     GameObject player;
     Inputs inputs;
     public bool on;

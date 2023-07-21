@@ -51,7 +51,7 @@ public class ArmyMan1 : MonoBehaviour
             gameObject.GetComponent<ArmyMan>().enabled = false;
 
         }
-        if (inputs.interacting)
+        if (inputs.interacting && text_stage > 0)
         {
             text_stage += 1;
             //inputs.interacting = false;
