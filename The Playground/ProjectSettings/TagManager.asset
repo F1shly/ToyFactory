@@ -12,6 +12,7 @@ TagManager:
   - RoomClass
   - Holster
   - LevelManager
+  - ROOM
   layers:
   - Default
   - TransparentFX

@@ -8,10 +8,10 @@ public class spawnRoom : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 100), 0, Random.Range(0, 100)), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 100), 0, Random.Range(0, 100)), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 100), 0, Random.Range(0, 100)), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 100), 0, Random.Range(0, 100)), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 100), 0, Random.Range(0, 100)), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(00,0,100), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(50, 100), 0, Random.Range(10, 30)), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 60), 0, Random.Range(20, 40)), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(20, 80), 0, Random.Range(40, 70)), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(100,0,0), gameObject.transform.rotation);
     }
 }
