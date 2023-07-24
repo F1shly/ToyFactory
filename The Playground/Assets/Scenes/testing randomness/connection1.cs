@@ -44,11 +44,11 @@ public class connection1 : MonoBehaviour
                     {
                         if (transform.position.z > nextRoom.transform.position.z)
                         {
-                            Instantiate(connectors[1], new Vector3(transform.position.x + 5 - 14.5f, transform.position.y, transform.position.z - 2), Quaternion.Euler(transform.rotation.x, transform.rotation.y + 180, transform.rotation.z));
+                            Instantiate(connectors[1], new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(transform.rotation.x, transform.rotation.y + 180, transform.rotation.z));
                         }
                         else
                         {
-                            Instantiate(connectors[1], new Vector3(transform.position.x + 4.5f - 14.5f, transform.position.y, transform.position.z), Quaternion.Euler(transform.rotation.x, transform.rotation.y + 90, transform.rotation.z));
+                            Instantiate(connectors[1], new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(transform.rotation.x, transform.rotation.y + 90, transform.rotation.z));
                         }
                     }
                     else
@@ -63,11 +63,11 @@ public class connection1 : MonoBehaviour
                     {
                         if (transform.position.z > nextRoom.transform.position.z)
                         {
-                            Instantiate(connectors[1], new Vector3(transform.position.x - 4.5f + 14.5f, transform.position.y, transform.position.z), Quaternion.Euler(transform.rotation.x, transform.rotation.y - 90, transform.rotation.z));
+                            Instantiate(connectors[1], new Vector3(transform.position.x + 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(transform.rotation.x, transform.rotation.y - 90, transform.rotation.z));
                         }
                         else
                         {
-                            Instantiate(connectors[1], new Vector3(transform.position.x - 5 + 14.5f, transform.position.y, transform.position.z + 2), Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z));
+                            Instantiate(connectors[1], new Vector3(transform.position.x + 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z));
                         }
                     }
                     else

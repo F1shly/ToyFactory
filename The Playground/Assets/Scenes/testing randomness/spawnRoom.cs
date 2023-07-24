@@ -9,9 +9,9 @@ public class spawnRoom : MonoBehaviour
     private void Start()
     {
         Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(50,0,0), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(50, 100), 0, Random.Range(10, 30)), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(0, 60), 0, Random.Range(20, 40)), gameObject.transform.rotation);
-        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Random.Range(20, 80), 0, Random.Range(40, 70)), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Mathf.Round(Random.Range(5, 10)) * 10, 0, Mathf.Round(Random.Range(1, 3)) * 10), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Mathf.Round(Random.Range(0, 6)) * 10, 0, Mathf.Round(Random.Range(2, 4)) * 10), gameObject.transform.rotation);
+        Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(Mathf.Round(Random.Range(2, 8)) * 10, 0, Mathf.Round(Random.Range(4, 7)) * 10), gameObject.transform.rotation);
         Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(50,0,100), gameObject.transform.rotation);
     }
 }

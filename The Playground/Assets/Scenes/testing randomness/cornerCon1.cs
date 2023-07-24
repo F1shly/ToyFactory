@@ -42,18 +42,18 @@ public class cornerCon1 : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x - 2, transform.position.y, transform.position.z + 4.5f), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z + 2.5f), Quaternion.Euler(0, 0, 0));
                     }
                 }
                 else
                 {
                     if (nextRoom.transform.position.x > transform.position.x)
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x + 2, transform.position.y, transform.position.z - 2.5f), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z + 2.5f), Quaternion.Euler(0, 0, 0));
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z - 4.5f), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z - 2.5f), Quaternion.Euler(0, 0, 0));
                     }
                 } 
             }

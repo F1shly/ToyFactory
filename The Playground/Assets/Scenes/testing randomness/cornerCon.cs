@@ -38,7 +38,7 @@ public class cornerCon : MonoBehaviour
                 {
                     if (nextRoom.transform.position.z > transform.position.z)
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x + 4.5f, transform.position.y, transform.position.z + 2), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x + 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
                     }
                     else
                     {
@@ -49,11 +49,11 @@ public class cornerCon : MonoBehaviour
                 {
                     if (nextRoom.transform.position.z > transform.position.z)
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x - 4.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z - 2), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
                     }
                 }
             }
