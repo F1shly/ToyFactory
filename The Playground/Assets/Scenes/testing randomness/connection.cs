@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class connection : MonoBehaviour
 {
-    public int test;
+    public int test, roomint;
     public bool on = true;
     locating Locating;
     public GameObject[] connectors;
@@ -18,7 +18,7 @@ public class connection : MonoBehaviour
     private void Update()
     {           
         Locating = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<locating>();
-        nextRoom = Locating.rooms[4];
+        nextRoom = Locating.rooms[roomint];
 
         float distX = nextRoom.transform.position.x - transform.position.x;
         float distZ = nextRoom.transform.position.z - transform.position.z;
@@ -48,12 +48,12 @@ public class connection : MonoBehaviour
                         }
                         else
                         {
-                            Instantiate(connectors[1], new Vector3(transform.position.x + 2, transform.position.y, transform.position.z - 9.5f), Quaternion.Euler(transform.rotation.x, transform.rotation.y - 90, transform.rotation.z));
+                            Instantiate(connectors[1], new Vector3(transform.position.x + 2, transform.position.y, transform.position.z - 4.5f), Quaternion.Euler(transform.rotation.x, transform.rotation.y - 90, transform.rotation.z));
                         }
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z - 10), transform.rotation);
+                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z - 5), transform.rotation);
                     }
                 }
                 //if below
@@ -63,7 +63,7 @@ public class connection : MonoBehaviour
                     {
                         if (transform.position.x > nextRoom.transform.position.x)
                         {
-                            Instantiate(connectors[1], new Vector3(transform.position.x-2, transform.position.y, transform.position.z + 9.5f), Quaternion.Euler(transform.rotation.x, transform.rotation.y + 90, transform.rotation.z));
+                            Instantiate(connectors[1], new Vector3(transform.position.x - 2, transform.position.y, transform.position.z + 4.5f), Quaternion.Euler(transform.rotation.x, transform.rotation.y + 90, transform.rotation.z));
                         }
                         else
                         {
@@ -72,7 +72,7 @@ public class connection : MonoBehaviour
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z + 10), transform.rotation);
+                        Instantiate(connectors[0], new Vector3(transform.position.x, transform.position.y, transform.position.z + 5), transform.rotation);
                     }
                 }
             }

@@ -153,6 +153,10 @@ MonoBehaviour:
   rooms: []
   connectors:
   - {fileID: 8918515236933638049, guid: 9cc619e395ae89241a33cf52e70a8989, type: 3}
+  - {fileID: 8918515236933638049, guid: 6461514394a42fc478615dd7b6405127, type: 3}
+  - {fileID: 8918515236933638049, guid: 2b5224258461d1d4ba017b8514cedc74, type: 3}
+  - {fileID: 8918515236933638049, guid: 875f0f4471400b84d8ea784604b6724f, type: 3}
+  - {fileID: 8918515236933638049, guid: 35fe43a666d50914b89f6d78d515284f, type: 3}
 --- !u!4 &94905064
 Transform:
   m_ObjectHideFlags: 0

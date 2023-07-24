@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1029992398533082616}
   - component: {fileID: -5430510161467709258}
   m_Layer: 0
-  m_Name: corner
+  m_Name: corner8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,10 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90db2bb38d1a4643846a89acbfd03a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
+  test: 50
+  roomint: 3
   on: 1
   connectors:
-  - {fileID: 3920052513136561904, guid: 282ea40ef27eddb4fb29c5d8db9e2b4a, type: 3}
+  - {fileID: 3920052513136561904, guid: 7137e8adf8ae0774a8eb92ede0224cd8, type: 3}
   nextRoom: {fileID: 0}
 --- !u!1001 &2971606841475833388
 PrefabInstance:

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 232842319551977656}
   - component: {fileID: 4600118947811523509}
   m_Layer: 0
-  m_Name: con1
+  m_Name: straight4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8918515236933638049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -205,9 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49af98f01848009439ed94c9a6395a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 100
+  test: 50
+  roomint: 3
   on: 1
   connectors:
   - {fileID: 8918515236933638049}
-  - {fileID: 8553622263640814305, guid: c5c32cc88bac710468ca40c46a3b38a7, type: 3}
+  - {fileID: 8553622263640814305, guid: eb60eee607c24394683b10a07c8aff40, type: 3}
   nextRoom: {fileID: 0}

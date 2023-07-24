@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cornerCon : MonoBehaviour
 {
-    public int test;
+    public int test, roomint;
     public bool on = true;
     locating Locating;
     public GameObject[] connectors;
@@ -18,7 +18,7 @@ public class cornerCon : MonoBehaviour
     private void Update()
     {
         Locating = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<locating>();
-        nextRoom = Locating.rooms[4];
+        nextRoom = Locating.rooms[roomint];
 
         float distX = nextRoom.transform.position.x - transform.position.x;
         float distZ = nextRoom.transform.position.z - transform.position.z;
@@ -38,22 +38,22 @@ public class cornerCon : MonoBehaviour
                 {
                     if (nextRoom.transform.position.z > transform.position.z)
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x + 9.5f, transform.position.y, transform.position.z + 2), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x + 4.5f, transform.position.y, transform.position.z + 2), Quaternion.Euler(0, 0, 0));
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x + 7.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x + 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
                     }
                 }
                 else
                 {
                     if (nextRoom.transform.position.z > transform.position.z)
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x - 7.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x - 4.5f, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
                     }
                     else
                     {
-                        Instantiate(connectors[0], new Vector3(transform.position.x - 9.5f, transform.position.y, transform.position.z - 2), Quaternion.Euler(0, 0, 0));
+                        Instantiate(connectors[0], new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z - 2), Quaternion.Euler(0, 0, 0));
                     }
                 }
             }
