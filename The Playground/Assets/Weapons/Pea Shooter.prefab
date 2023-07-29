@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 997386554}
   m_Layer: 0
   m_Name: Pea Shooter
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,13 +78,15 @@ MonoBehaviour:
   weaponID: 1
   projectile: {fileID: 8153718009676053682, guid: f7730078517405e4196aaac58a6c7fd4,
     type: 3}
+  canShoot: 0
   fireRate: 0.75
   burstRPM: 0.05
-  burstNumber: 3
-  canShoot: 0
+  MultiShotSpread: 0
+  bulletsPerShot: 0
   BurstFire: 1
   SinlgeShot: 0
   FullAuto: 0
+  shotGun: 0
 --- !u!1 &1222831600311211873
 GameObject:
   m_ObjectHideFlags: 0

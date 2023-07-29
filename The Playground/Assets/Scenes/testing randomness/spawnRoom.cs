@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawnRoom : MonoBehaviour
 {
     public GameObject[] obj;
-    public int y = 50, z = -70, x = -70;
+    public int y = 2, z = -70, x = -70;
 
     private void Start()
     {

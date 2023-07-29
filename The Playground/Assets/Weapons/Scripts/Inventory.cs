@@ -29,6 +29,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+
         test = slot1;
         test2 = slot2;
         test3 = slot_Discarded;
