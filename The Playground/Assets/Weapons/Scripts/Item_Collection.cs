@@ -6,7 +6,12 @@ public class Item_Collection : MonoBehaviour
 {
     private bool up;
     private float timer;
+    public bool done;
 
+    private void Awake()
+    {
+        done = true;
+    }
     private void Update()
     {
         if (up)
@@ -33,5 +38,13 @@ public class Item_Collection : MonoBehaviour
         }
 
         transform.eulerAngles = transform.eulerAngles + new Vector3(0, Time.deltaTime * 30, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
+        {
+            done = false;
+        }
     }
 }

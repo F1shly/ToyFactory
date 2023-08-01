@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451539736199566231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.09849253, y: 0.58243006, z: -0.060001235, w: -0.80465794}
+  m_LocalPosition: {x: 23.88975, y: 14.9960785, z: -45.21113}
   m_LocalScale: {x: 0.164906, y: 0.164906, z: 0.164906}
   m_Children:
   - {fileID: 86488611420054080}
@@ -82,7 +82,7 @@ MonoBehaviour:
   fireRate: 0.75
   burstRPM: 0.05
   MultiShotSpread: 0
-  bulletsPerShot: 0
+  bulletsPerShot: 3
   BurstFire: 1
   SinlgeShot: 0
   FullAuto: 0

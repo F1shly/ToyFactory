@@ -1,5 +1,70 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1342924356752605548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5240994950211611258}
+  - component: {fileID: 8189756494602110285}
+  - component: {fileID: 9030158593688009946}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: RoomClass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5240994950211611258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342924356752605548}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3536449252480166079}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8189756494602110285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342924356752605548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a25b9800b444bc4aafd71a751c51748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_check:
+  - {fileID: 2248691247419180216}
+  - {fileID: 3331596509125477949}
+  - {fileID: 4933481887015328876}
+  enemy_total: 3
+  player_in_room: 0
+  condition_met: 0
+  room_walls: []
+--- !u!65 &9030158593688009946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342924356752605548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 20, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3536449252480166073
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +75,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3536449252480166079}
   - component: {fileID: 3536449252480166078}
-  - component: {fileID: 7675769224199033590}
   m_Layer: 0
   m_Name: Room3
   m_TagString: ROOM
@@ -36,6 +100,7 @@ Transform:
   - {fileID: 8566061702439773541}
   - {fileID: 5181393720043923424}
   - {fileID: 3288481904443801009}
+  - {fileID: 5240994950211611258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61,26 +126,6 @@ MonoBehaviour:
   - {fileID: 3885205801483390603, guid: 8162285b6b8717e4bb13e44c94b9e83d, type: 3}
   - {fileID: 6251621407145054174, guid: e82daa09e0925164282b8c8639cd585c, type: 3}
   - {fileID: 1581076150795937726, guid: a9ec45772d935864bbb59e8f4d2feab7, type: 3}
---- !u!114 &7675769224199033590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3536449252480166073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a25b9800b444bc4aafd71a751c51748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy_check:
-  - {fileID: 2248691247419180216}
-  - {fileID: 3331596509125477949}
-  - {fileID: 4933481887015328876}
-  enemy_total: 3
-  player_in_room: 0
-  condition_met: 0
-  room_walls: []
 --- !u!1 &5753095758671325952
 GameObject:
   m_ObjectHideFlags: 0

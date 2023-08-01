@@ -24,6 +24,7 @@ public class WeaponPickUp : MonoBehaviour
     {
         if (other == player.GetComponent<Collider>())
         {
+            gameObject.tag = "Untagged";
             transform.localScale = scale;
             transform.parent = null;
             if (Inventory.slot1 == 0)
