@@ -15,10 +15,6 @@ public class pedastoolItem : MonoBehaviour
         {
             player_in_room = true;
             weapons = GameObject.FindGameObjectsWithTag("weapon");
-            if(weapons.Length == 1)
-            {
-                test = 1;
-            }
         }
     }
 
