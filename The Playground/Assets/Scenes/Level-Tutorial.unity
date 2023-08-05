@@ -2782,6 +2782,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RPG-Character
       objectReference: {fileID: 0}
+    - target: {fileID: 2020820408599529074, guid: 9cb64819f87a7af4aa04046885aff3de,
+        type: 3}
+      propertyPath: rotateSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020820408599529074, guid: 9cb64819f87a7af4aa04046885aff3de,
+        type: 3}
+      propertyPath: sens
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cb64819f87a7af4aa04046885aff3de, type: 3}
 --- !u!1001 &473742285

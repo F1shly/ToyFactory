@@ -18,9 +18,11 @@ public class pedastoolItem : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         itemCollected = upDown.GetComponent<Item_Collection>().done;
+
+
         if(player_in_room && itemCollected)
         {
             if(test == 1)

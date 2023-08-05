@@ -1136,7 +1136,7 @@ MonoBehaviour:
   projectile: {fileID: 8153718009676053682, guid: ade24ccb95bae58449193f23b45fadb9,
     type: 3}
   canShoot: 0
-  fireRate: 1
+  fireRate: 0.75
   burstRPM: 0
   MultiShotSpread: 0
   bulletsPerShot: 0
