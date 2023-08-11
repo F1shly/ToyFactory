@@ -106,6 +106,7 @@ MonoBehaviour:
   upDown: {fileID: 3960185829391798841}
   player_in_room: 0
   itemCollected: 0
+  cycling: 0
 --- !u!1 &5753095758671325952
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 1149836503171802639, guid: 07dbd11d16ffab745875e1b9810a79f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.046
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1149836503171802639, guid: 07dbd11d16ffab745875e1b9810a79f1,
         type: 3}
@@ -728,7 +729,7 @@ PrefabInstance:
     - target: {fileID: 1149836503171802639, guid: 07dbd11d16ffab745875e1b9810a79f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1149836503171802639, guid: 07dbd11d16ffab745875e1b9810a79f1,
         type: 3}

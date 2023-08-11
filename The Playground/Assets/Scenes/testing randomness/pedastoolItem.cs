@@ -9,6 +9,12 @@ public class pedastoolItem : MonoBehaviour
     public GameObject[] weapons;
     public GameObject upDown;
     public bool player_in_room, itemCollected;
+    public bool cycling;
+
+    private void Awake()
+    {
+        cycling = true;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other == GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>())
@@ -22,7 +28,6 @@ public class pedastoolItem : MonoBehaviour
     {
         itemCollected = upDown.GetComponent<Item_Collection>().done;
 
-
         if(player_in_room && itemCollected)
         {
             if(test == 1)
@@ -32,8 +37,9 @@ public class pedastoolItem : MonoBehaviour
             }
             else
             {
+                
                 time += Time.deltaTime;
-                if(time >= 1)
+                if (time >= 1)
                 {
                     time = 0;
                     item_presented += 1;
@@ -43,7 +49,7 @@ public class pedastoolItem : MonoBehaviour
                     item_presented = 0;
                 }
 
-                if(time > 0.1)
+                if(time > 0)
                 {
                     weapons[item_presented].transform.position = upDown.transform.position;
                     weapons[item_presented].transform.parent = upDown.transform;
@@ -59,8 +65,7 @@ public class pedastoolItem : MonoBehaviour
                     weapons[item_presented - 1].transform.position = new Vector3(0, 0, 0);
                     weapons[item_presented - 1].transform.parent = null;
                 }
-            }
-           
+            } 
         }
     }
 }

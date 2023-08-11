@@ -24,7 +24,7 @@ public class WeaponPickUp : MonoBehaviour
     {
         if (other == player.GetComponent<Collider>())
         {
-            gameObject.tag = "Untagged";
+            StartCoroutine(itemPickedUp());
             transform.localScale = scale;
             transform.parent = null;
             if (Inventory.slot1 == 0)
@@ -55,6 +55,11 @@ public class WeaponPickUp : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         inventory.weapon[Inventory.slot_Discarded].GetComponent<WeaponPickUp>().onFloor = true;
+    }
+    IEnumerator itemPickedUp()
+    {
+        yield return new WaitForSeconds(1);
+        gameObject.tag = "Untagged";
     }
 
     private void Update()
