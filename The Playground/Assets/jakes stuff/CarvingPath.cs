@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class CarvingPath : MonoBehaviour
 {
-    public GameObject pather;
+    public GameObject[] pather, rooms;
     public GameObject floor;
     private void Awake()
     {
-        pather = GameObject.FindGameObjectWithTag("Pather");
+        pather = GameObject.FindGameObjectsWithTag("Pather");
+    }
+    private void Update()
+    {
+        rooms = GameObject.FindGameObjectsWithTag("ROOM");
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other == pather.GetComponent<Collider>())
+        foreach (var item in pather)
         {
-            Instantiate(floor, new Vector3(transform.position.x, transform.position.y + 20, transform.position.z), transform.rotation);
+            if (other == item.GetComponent<Collider>())
+            {
+                Instantiate(floor, new Vector3(transform.position.x, transform.position.y + 70, transform.position.z), transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 }

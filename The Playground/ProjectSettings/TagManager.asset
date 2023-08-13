@@ -16,6 +16,7 @@ TagManager:
   - weapon
   - falseInv
   - Pather
+  - GridPart
   layers:
   - Default
   - TransparentFX

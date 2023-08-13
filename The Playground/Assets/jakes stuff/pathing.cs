@@ -8,22 +8,54 @@ public class pathing : MonoBehaviour
     public float speed;
     float curved_speed;
     public bool curve;
+    bool waited;
+    public float test1, test2;
     
     private void Awake()
     {
-        transform.position = start.transform.position;
+        waited = false;
     }
     private void Update()
     {
-        if(curve)
+        float proxX, proxY;
+
+
+        proxX = transform.position.x - end.transform.position.x;
+        proxY = transform.position.z - end.transform.position.z;
+        test1 = proxX;
+        test2 = proxY;
+
+        StartCoroutine(wait());
+        if(waited)
         {
-            curved_speed += Time.deltaTime;
-            transform.position = Vector3.Slerp(start.transform.position, end.transform.position, curved_speed / speed);
+            Vector3 Start, End;
+            Start = new Vector3(start.transform.position.x, start.transform.position.y + 70, start.transform.position.z);
+            End = new Vector3(end.transform.position.x, end.transform.position.y + 70, end.transform.position.z);
+
+            if (curve)
+            {
+                curved_speed += Time.deltaTime;
+                transform.position = Vector3.Slerp(Start, End, curved_speed / speed);
+            }
+            else
+            {
+                float step = speed + Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, End, step / 15);
+            }
         }
-        else
+        if(proxX > -15 && proxX < 15
+            && proxY > -15 && proxY < 15)
         {
-            float step = speed + Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, end.transform.position, step / 5);
+            Destroy(gameObject);
         }
+    }
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(1);
+        if(!waited)
+        {
+            transform.position = new Vector3(start.transform.position.x, start.transform.position.y + 70,start.transform.position.z);
+        }
+        waited = true;
     }
 }
