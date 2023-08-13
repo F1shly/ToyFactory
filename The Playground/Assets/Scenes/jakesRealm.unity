@@ -965,7 +965,7 @@ PrefabInstance:
     - target: {fileID: 3572688835004858810, guid: 53f4f732282204a44bcbb0112fbe1ed7,
         type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: gridLayer
       objectReference: {fileID: 0}
     - target: {fileID: 3572688835004858813, guid: 53f4f732282204a44bcbb0112fbe1ed7,
         type: 3}
@@ -1729,7 +1729,7 @@ PrefabInstance:
     - target: {fileID: 7353410728894575503, guid: 31670cfe613c60346b198bc9a6d7630e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7353410728894575503, guid: 31670cfe613c60346b198bc9a6d7630e,
         type: 3}
@@ -1779,7 +1779,7 @@ PrefabInstance:
     - target: {fileID: 7353410728894575539, guid: 31670cfe613c60346b198bc9a6d7630e,
         type: 3}
       propertyPath: m_Name
-      value: start
+      value: start (room1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31670cfe613c60346b198bc9a6d7630e, type: 3}
@@ -2185,6 +2185,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6434865833006982256, guid: c67e1b4bb446e574f8ddab69b0cd5b03,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6434865833006982258, guid: c67e1b4bb446e574f8ddab69b0cd5b03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2260,6 +2265,26 @@ PrefabInstance:
       propertyPath: end
       value: 
       objectReference: {fileID: 280627290}
+    - target: {fileID: 6434865833006982262, guid: c67e1b4bb446e574f8ddab69b0cd5b03,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434865833006982262, guid: c67e1b4bb446e574f8ddab69b0cd5b03,
+        type: 3}
+      propertyPath: curved
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434865833006982262, guid: c67e1b4bb446e574f8ddab69b0cd5b03,
+        type: 3}
+      propertyPath: curve_type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434865833006982262, guid: c67e1b4bb446e574f8ddab69b0cd5b03,
+        type: 3}
+      propertyPath: curve
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67e1b4bb446e574f8ddab69b0cd5b03, type: 3}
 --- !u!1 &2045970519
@@ -2355,7 +2380,7 @@ PrefabInstance:
     - target: {fileID: 5737835576834870540, guid: f49ca771904ab044998e86e7459a1bf2,
         type: 3}
       propertyPath: m_Name
-      value: end
+      value: end (room2)
       objectReference: {fileID: 0}
     - target: {fileID: 5737835576834870544, guid: f49ca771904ab044998e86e7459a1bf2,
         type: 3}
@@ -2365,7 +2390,7 @@ PrefabInstance:
     - target: {fileID: 5737835576834870544, guid: f49ca771904ab044998e86e7459a1bf2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5737835576834870544, guid: f49ca771904ab044998e86e7459a1bf2,
         type: 3}

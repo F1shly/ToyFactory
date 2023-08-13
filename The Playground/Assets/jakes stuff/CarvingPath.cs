@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarvingPath : MonoBehaviour
 {
     public GameObject pather;
+    public GameObject floor;
     private void Awake()
     {
         pather = GameObject.FindGameObjectWithTag("Pather");
@@ -13,7 +14,7 @@ public class CarvingPath : MonoBehaviour
     {
         if (other == pather.GetComponent<Collider>())
         {
-            Destroy(gameObject);
+            Instantiate(floor, new Vector3(transform.position.x, transform.position.y + 20, transform.position.z), transform.rotation);
         }
     }
 }

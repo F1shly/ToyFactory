@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class grid : MonoBehaviour
 {
-    public GameObject pather, floor, gridpart;
+    public GameObject gridpart;
     public int gridx = 1, gridy = 1;
     
 
@@ -16,13 +16,6 @@ public class grid : MonoBehaviour
             {
                 Instantiate(gridpart, new Vector3(transform.position.x + (i*10),transform.position.y,transform.position.z + (l*10)),transform.rotation);
             }
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-       if(other == pather.GetComponent<Collider>())
-        {
-            Instantiate(floor, new Vector3(transform.position.x, transform.position.y + 20, transform.position.z), floor.transform.rotation, floor.transform.parent = transform);
         }
     }
 }
