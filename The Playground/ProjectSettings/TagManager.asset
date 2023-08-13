@@ -15,6 +15,7 @@ TagManager:
   - ROOM
   - weapon
   - falseInv
+  - Pather
   layers:
   - Default
   - TransparentFX
