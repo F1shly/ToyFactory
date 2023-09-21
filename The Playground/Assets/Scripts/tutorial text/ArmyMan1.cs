@@ -37,7 +37,7 @@ public class ArmyMan1 : MonoBehaviour
         }
         if (text_stage == 3)
         {
-            NPCText.text = "YOU HAVE 2 WEAPON SLOTS, SWITCH BETWEEN THEM USING X OR X";
+            NPCText.text = "YOU HAVE 2 WEAPON SLOTS, SWITCH BETWEEN THEM USING  OR <sprite=9> / <sprite=10>";
         }
         if (text_stage == 4)
         {
